@@ -21,4 +21,4 @@
 <% else %>
   <p><%= Spree.t(:you_have_no_favorites_yet) %></p>
 <% end %>
-<%= paginate @favorites %>
+<%= link_to 'Browse your nu wardrobe', favorites_path %>
