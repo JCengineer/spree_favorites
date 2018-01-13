@@ -1,12 +1,13 @@
-<h3><%= Your Nu Wardrobe %></h3>
+<h3><%= Spree.t(:my_favorites) %></h3>
 <% if @favorites.present? %>
   
   <% @favorites.each do |favorite| %>
-    <tr class="<%= cycle('even', 'odd') %>" id="favorite_<%= favorite.id %>">
-      <td class="favorite-product-image"><%= link_to small_image(favorite.favorable), product_path(favorite.favorable) %></td>
-      <td class="favorite-product-name"><%= favorite.favorable.name %></td>
+    <div id="favorite_<%= favorite.id %>">
+      <div class="favorite-product-image"><%= link_to small_image(favorite.favorable), product_path(favorite.favorable) %></div>
+      <div class="favorite-product-name"><%= favorite.favorable.name %></div>
       <%= render :partial => 'spree/products/product_item' , :locals => {:product => favorite.favorable} %>
       <%= #link_to Spree.t(:remove), favorite_path(favorite), method: :delete, remote: true %>
+    </div>
   <% end %>
 <% else %>
   <p><%= Spree.t(:you_have_no_favorites_yet) %></p>
