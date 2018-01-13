@@ -6,7 +6,7 @@
       <div class="favorite-product-image"><%= link_to small_image(favorite.favorable), product_path(favorite.favorable) %></div>
       <div class="favorite-product-name"><%= favorite.favorable.name %></div>
       <%= render :partial => 'spree/products/product_item' , :locals => {:product => favorite.favorable} %>
-      <%= #link_to Spree.t(:remove), favorite_path(favorite), method: :delete, remote: true %>
+      <!-- < % = #link_to Spree.t(:remove), favorite_path(favorite), method: :delete, remote: true %> -->
     </div>
   <% end %>
 <% else %>
