@@ -12,4 +12,5 @@ Spree::UsersController.class_eval do
 	  else
 	    @favorites = []
 	  end
+	end
 end
