@@ -1,7 +1,7 @@
 Deface::Override.new(
   :virtual_path => 'spree/admin/general_settings/edit',
   :name => 'add_favorite_products_per_page_configuration',
-  :insert_after => "#preferences .row",
+  :insert_after => "#preferences .row:last",
   :text => %Q{
     <div class="row">
       <fieldset class="no-border-bottom">
