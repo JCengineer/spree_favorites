@@ -5,7 +5,7 @@
 	</div>
 	<div class="col-md-9 col-sm-8 pull-right">  
 		<% if @favorites.present? %>
-		  <% f_products = @favorites.reject{|f| f.favorable_type != 'Spree::Product'}.map{|f| f.favorable }[0..2] %>
+		  <% f_products = @favorites.reject{|f| f.favorable_type != 'Spree::Supplier'}.map{|f| f.favorable }[0..2] %>
 		  <%= render :partial => 'spree/shared/products', :locals => { :products => f_products } %>
 		<% else %>
 		  <p><%= Spree.t(:you_have_no_favorites_yet) %></p>
