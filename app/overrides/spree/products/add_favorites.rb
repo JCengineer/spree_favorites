@@ -10,7 +10,7 @@ Deface::Override.new(:virtual_path 			=> "spree/products/show",
                      :partial      			=> 'spree/products/favorite_icon')
 
 
-Deface::Override.new(:virtual_path 			=> "spree/shared/_products",
+Deface::Override.new(:virtual_path 			=> "spree/products/_product_item",
                      :name         			=> "add_favorites_icon_to_product_item",
                      :insert_after  		=> "erb[loud]:contains('product_image')",
                      :partial      			=> 'spree/products/favorite_icon_item')
