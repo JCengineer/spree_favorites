@@ -2,6 +2,7 @@ module Spree
   class FavoritesController < Spree::StoreController
 
     before_filter :find_favorite, only: [:destroy]
+    helper 'spree/products'
 
     def index
       if try_spree_current_user
