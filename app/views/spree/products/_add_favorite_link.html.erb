@@ -1,4 +1,3 @@
-<!-- insert_after "div[itemprop='description']" -->
 
 <% if has_favorite?(@product) %>
   <%= link_to Spree.t(:remove_favorite), favorite_path(get_favorite(@product), favorable_id: @product.id, favorable_type: 'Spree::Product'), method: :delete, remote: true, id: "favorable_product_#{@product.id}" %>
