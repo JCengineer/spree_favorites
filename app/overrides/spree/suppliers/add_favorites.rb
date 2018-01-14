@@ -1,7 +1,7 @@
 Deface::Override.new(:virtual_path 			=> "spree/suppliers/show",
                      :name         			=> "add_favorites_link_to_supplier",
                      :insert_before 		=> "#supplier-description",
-                     :partial      			=> 'spree/shared/add_favorite_link')
+                     :partial      			=> 'spree/shared/add_favorite_link_supplier')
 
 
 Deface::Override.new(:virtual_path 			=> "spree/suppliers/show",
