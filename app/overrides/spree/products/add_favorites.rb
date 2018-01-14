@@ -6,6 +6,12 @@ Deface::Override.new(:virtual_path 			=> "spree/products/show",
 
 Deface::Override.new(:virtual_path 			=> "spree/products/show",
                      :name         			=> "add_favorites_icon_to_product",
-                     :insert_before 		=> "#main-image .panel-body",
+                     :insert_bottom 		=> "#main-image .panel-body",
                      :partial      			=> 'spree/products/favorite_icon')
+
+
+Deface::Override.new(:virtual_path 			=> "spree/products/_product_item",
+                     :name         			=> "add_favorites_icon_to_product_item",
+                     :insert_bottom 		=> "erb[loud].contains('product_image')",
+                     :partial      			=> 'spree/products/favorite_icon_item')
 

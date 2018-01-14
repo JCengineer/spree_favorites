@@ -3,11 +3,11 @@
 
 en:
   spree:
-    add_favorite: "Add Favorite"
-    favorites: Favorites
+    add_favorite: "Add to my Nu Wardrobe"
+    favorites: "Your Nu Wardrobe"
     favorites_settings: "Favorite Settings"
     favorites_per_page: "Per Page"
-    my_favorites: My Favorites
-    remove_favorite: "Remove Favorite"
-    successfully_added_favorite: Successfully added favorite.
-    you_have_no_favorites_yet: You have no favorites yet.
+    my_favorites: "My Nu Wardrobe"
+    remove_favorite: "Remove from my Nu Wardrobe"
+    successfully_added_favorite: "Successfully added piece."
+    you_have_no_favorites_yet: "You have no liked pieces yet."

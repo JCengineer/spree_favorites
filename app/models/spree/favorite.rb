@@ -2,7 +2,8 @@ module Spree
   class Favorite < ActiveRecord::Base
 
     FAVORABLES_ALLOWED = [
-      'Spree::Product'
+      'Spree::Product',
+      'Spree::User'
     ]
 
     belongs_to :favorable, polymorphic: true
