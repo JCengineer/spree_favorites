@@ -14,16 +14,20 @@
 			</div>
 		</div>
 	 	
-	 	<div class="col-md-3 col-sm-4">
-			<h3><%= Spree.t(:my_favorite_suppliers) %>:</h3>
-		</div>
-		<div class="col-md-9 col-sm-8 pull-right">  
-			<% if @favorites.present? %>
-			  <% f_suppliers = @favorites.reject{|f| f.favorable_type != 'Spree::Supplier'}.map{|f| f.favorable } %>
-			  <%= render :partial => 'spree/suppliers/supplier', :collection => f_suppliers %>
-			<% else %>
-			  <p><%= Spree.t(:you_have_no_favorites_yet) %></p>
-			<% end %>
+	  <div class="row">
+		 	<div class="col-md-3 col-sm-4">
+				<h3><%= Spree.t(:my_favorite_suppliers) %>:</h3>
+			</div>
+			<div class="col-md-9 col-sm-8 pull-right">  
+				<% if @favorites.present? %>
+				  <div id="suppliers" class="row">
+					  <% f_suppliers = @favorites.reject{|f| f.favorable_type != 'Spree::Supplier'}.map{|f| f.favorable } %>
+					  <%= render :partial => 'spree/suppliers/supplier', :collection => f_suppliers %>
+				  </div>
+				<% else %>
+				  <p><%= Spree.t(:you_have_no_favorites_yet) %></p>
+				<% end %>
+			</div>
 		</div>
 
 	</div>
