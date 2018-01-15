@@ -1,9 +1,12 @@
 <% if @success %>
   if($("#favorable_<%= @favorable_type.demodulize.underscore %>_<%= @favorable_id %>").length) {
-    $("#favorable_<%= @favorable_type.demodulize.underscore %>_<%= @favorable_id %>").show();
+    $("#favorable_<%= @favorable_type.demodulize.underscore %>_<%= @favorable_id %>")
+	  	.attr('href', '<%= favorite_path(@favorite, favorable_id: @favorable_id, favorable_type: @favorable_type) %>')
+	  	.data('method', 'delete')
+	  	.text('<%= Spree.t(:remove_favorite) %>')
 		$("favorite-icon").show();
   } else {
-    $("#favorite_<%= @favorite.id %>").hide();
-		$("favorite-icon").hide();
+    $("#favorite_<%= @favorite.id %>").remove();
+		$("favorite-icon").show();
   }
 <% end %>

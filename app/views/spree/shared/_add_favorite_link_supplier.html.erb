@@ -1,10 +1,14 @@
 <p class="favorite-links">
 	<% if has_favorite?(@supplier) %>
-		<%= link_to Spree.t(:remove_favorite), favorite_path(get_favorite(@supplier), favorable_id: @supplier.id, favorable_type: 'Spree::Supplier'), method: :delete, remote: true, id: "favorable_supplier_#{@supplier.id}", style: has_favorite?(@supplier) ? "display:none;" : "" %>
-	<% end %>
+		
+		<%= link_to Spree.t(:remove_favorite), favorite_path(get_favorite(@supplier), favorable_id: @supplier.id, favorable_type: 'Spree::Supplier'), method: :delete, remote: true, id: "favorable_supplier_#{@supplier.id}" %>
 	
-	<%= link_to favorites_path(favorable_id: @supplier.id, favorable_type: 'Spree::Supplier'), method: :post, remote: true, id: "favorable_supplier_#{@supplier.id}", style: has_favorite?(@supplier) ? "" : "display:none;" do %>
-		<%= Spree.t(:add_favorite) %>:&nbsp;&nbsp;
-	  <button class="btn btn-success">&nbsp;&nbsp;<i class="glyphicon glyphicon-heart"></i>&nbsp;&nbsp;</button>
+	<% else %>
+	
+		<%= link_to favorites_path(favorable_id: @supplier.id, favorable_type: 'Spree::Supplier'), method: :post, remote: true, id: "favorable_supplier_#{@supplier.id}" do %>
+			<%= Spree.t(:add_favorite) %>:&nbsp;&nbsp;
+		  <button class="btn btn-success">&nbsp;&nbsp;<i class="glyphicon glyphicon-heart"></i>&nbsp;&nbsp;</button>
+		<% end %>
+	
 	<% end %>
 </p>
