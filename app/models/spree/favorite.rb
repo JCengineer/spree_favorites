@@ -3,7 +3,7 @@ module Spree
 
     FAVORABLES_ALLOWED = [
       'Spree::Product',
-      'Spree::User'
+      'Spree::Supplier'
     ]
 
     belongs_to :favorable, polymorphic: true
