@@ -1,5 +1,5 @@
 <% if @success %>
-  <% defined?(try_spree_current_user) %>
+  <% if defined?(try_spree_current_user) %>
     $("#favorable_<%= @favorable_type.demodulize.underscore %>_<%= @favorable_id %>")
   		.attr('href', '<%= favorite_path(@favorite, favorable_id: @favorable_id, favorable_type: @favorable_type) %>')
   		.data('method', 'delete')
