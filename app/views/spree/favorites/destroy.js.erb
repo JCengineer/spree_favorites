@@ -1,5 +1,5 @@
 <% if @success %>
-  <% if defined?(try_spree_current_user) %>
+  <% if try_spree_current_user %>
     if($("#favorable_<%= @favorable_type.demodulize.underscore %>_<%= @favorable_id %>").length) {
       $("#favorable_<%= @favorable_type.demodulize.underscore %>_<%= @favorable_id %>")
       	.attr('href', '<%= favorites_path(favorable_id: @favorite.favorable_id, favorable_type: @favorite.favorable_type) %>')
