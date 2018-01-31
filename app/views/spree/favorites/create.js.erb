@@ -1,7 +1,12 @@
 <% if @success %>
-     $("#favorable_<%= @favorable_type.demodulize.underscore %>_<%= @favorable_id %>")
+  <% defined?(try_spree_current_user) %>
+    $("#favorable_<%= @favorable_type.demodulize.underscore %>_<%= @favorable_id %>")
   		.attr('href', '<%= favorite_path(@favorite, favorable_id: @favorable_id, favorable_type: @favorable_type) %>')
   		.data('method', 'delete')
 	  	.text('<%= Spree.t(:remove_favorite) %>')
-    $(".favorite-icon").show();
+    $("#supplier-profile-picture .favorite-icon").show();
+    $("#main-image .favorite-icon").show();
+  <% else %>
+    window.location("/signup")
+  <% end %>
 <% end %>

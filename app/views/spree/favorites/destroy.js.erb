@@ -5,9 +5,11 @@
     	.data('method', 'post')
     	.html('<%= Spree.t(:add_favorite) %>:&nbsp;<button class="btn btn-success">&nbsp;&nbsp;<i class="glyphicon glyphicon-heart"></i>&nbsp;&nbsp;</button>')
 
-		$(".favorite-icon").hide();
+    $("supplier-profile-picture  .favorite-icon").hide();
+		$("#main-image .favorite-icon").hide();
   } else {
     $("#favorite_<%= @favorite.id %>").remove();
-		$(".favorite-icon").hide();
+    $("supplier-profile-picture  .favorite-icon").hide();
+		$("#main-image .favorite-icon").hide();
   }
 <% end %>
