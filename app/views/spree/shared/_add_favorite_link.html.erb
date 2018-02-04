@@ -14,5 +14,5 @@
 </p>
 <% favorites = @product.favorites.count %>
 <% if favorites > 0 %>
-	<p>Starred <% favorites %> times!</p>
+	<p>Starred <%= favorites %> times!</p>
 <% end %>
