@@ -8,8 +8,8 @@
   <% if !try_spree_current_user %>
     $('body').prepend('\
     	<div style="z-index:100;display:block;background:rgba(0,0,0,0.3);width:100%;height:100%;position:fixed">\
-        <div style="text-align:right;" onclick="$(this).parent().remove();">x</div>\
     		<div style="display:block;background:#fefefe;max-width:500px;margin:50px auto;text-align:center;padding:50px;border-radius:15px;">\
+          <div style="text-align:right;" onclick="$(this).parent().parent().remove();"><i class="glyphicon glyphicon-remove"></i></div>\
     			<h3>Thanks for adding to your Nu Wardrobe. Please sign in to continue:<br><br>\
     				<a href="/signup">Sign Up</a>\
     				<br><br>\
