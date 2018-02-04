@@ -6,8 +6,8 @@
 	<% else %>
 	
 		<%= link_to favorites_path(favorable_id: @supplier.id, favorable_type: 'Spree::Supplier'), method: :post, remote: true, id: "favorable_supplier_#{@supplier.id}" do %>
-			<%= Spree.t(:add_favorite) %>:&nbsp;&nbsp;
-		  <button class="btn btn-success">&nbsp;&nbsp;<i class="glyphicon glyphicon-heart"></i>&nbsp;&nbsp;</button>
+			<button class="btn btn-success" style="margin-right: 10px;">&nbsp;&nbsp;<i class="glyphicon glyphicon-heart"></i>&nbsp;&nbsp;</button>
+			Follow this lender
 		<% end %>
 	
 	<% end %>
