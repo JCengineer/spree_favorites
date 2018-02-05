@@ -14,5 +14,8 @@
 </p>
 <% favorites = @product.favorites.count %>
 <% if favorites > 0 %>
-	<p class="nu-color"><i class="glyphicon glyphicon-star"></i> <%= favorites %> </p>
+	<p class="nu-color">
+		<i class="glyphicon glyphicon-star"></i>
+		<span id="favorite-count"> <%= favorites %></span>
+	</p>
 <% end %>

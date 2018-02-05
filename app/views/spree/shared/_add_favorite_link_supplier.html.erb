@@ -1,7 +1,7 @@
 <p class="favorite-links">
 	<% if has_favorite?(@supplier) %>
 		
-		<%= link_to Spree.t(:remove_favorite), favorite_path(get_favorite(@supplier), favorable_id: @supplier.id, favorable_type: 'Spree::Supplier'), method: :delete, remote: true, id: "favorable_supplier_#{@supplier.id}" %>
+		<%= link_to "Unfollow this lender", favorite_path(get_favorite(@supplier), favorable_id: @supplier.id, favorable_type: 'Spree::Supplier'), method: :delete, remote: true, id: "favorable_supplier_#{@supplier.id}" %>
 	
 	<% else %>
 	
