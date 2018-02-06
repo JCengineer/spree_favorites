@@ -5,14 +5,14 @@
       .data('method', 'post')
       .html('<%= Spree.t(:add_favorite) %>:&nbsp;<button class="btn btn-success">&nbsp;&nbsp;<i class="glyphicon glyphicon-heart"></i>&nbsp;&nbsp;</button>')
 
-    $("supplier-profile-picture  .favorite-icon").hide();
-    $("#main-image .favorite-icon").hide();
   } else {
     $("#favorite_<%= @favorite.id %>").remove();
-    $("supplier-profile-picture  .favorite-icon").hide();
-    $("#main-image .favorite-icon").hide();
-    $("#favorite-count").text(parseInt($("#favorite-count").text())-1);
   }
+  
+  $("supplier-profile-picture .favorite-icon").hide();
+  $("#main-image .favorite-icon").hide();
+  $("#favorite-count").text(parseInt($("#favorite-count").text())-1);
+
   <% if !try_spree_current_user %>
     $('body').prepend('\
       <div style="z-index:100;display:block;background:rgba(0,0,0,0.3);width:100%;height:100%;position:fixed">\
