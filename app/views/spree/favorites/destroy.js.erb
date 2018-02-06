@@ -11,7 +11,7 @@
     $("#favorite_<%= @favorite.id %>").remove();
     $("supplier-profile-picture  .favorite-icon").hide();
     $("#main-image .favorite-icon").hide();
-    $("#favorite-count").text(parseInt($("#favorite-count").text()-1));
+    $("#favorite-count").text(parseInt($("#favorite-count").text())-1);
   }
   <% if !try_spree_current_user %>
     $('body').prepend('\
