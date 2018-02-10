@@ -5,8 +5,9 @@
 	</div>
 	<div class="col-md-9 col-sm-8 pull-right">  
 		<% if @favorites.present? %>
-		  <% f_suppliers = @favorites.reject{|f| f.favorable_type != 'Spree::Supplier'}.map{|f| f.favorable }[0..2] %>
+		  <% f_suppliers = @favorites.reject{|f| f.favorable_type != 'Spree::Supplier'}.sort_by(&:created_at).map{|f| f.favorable }[0..2] %>
 		  <%= render :partial => 'spree/suppliers/supplier', :collection => f_suppliers %>
+			<%= link_to 'Browse your nu wardrobe', favorites_path %>
 		<% else %>
 		  <p><%= Spree.t(:you_have_no_favorites_yet) %></p>
 		<% end %>
